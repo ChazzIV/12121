@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AuthServicesModule } from './services/services.module';
 import { AuthMaterialModule } from './material/material.module';
+import { AuthComponentsModule } from './components/components.module';
 
 
 
@@ -8,7 +9,8 @@ import { AuthMaterialModule } from './material/material.module';
   declarations: [],
   exports: [
     AuthServicesModule,
-    AuthMaterialModule
+    AuthMaterialModule,
+    AuthComponentsModule
   ]
 })
 export class AuthCommonsModule { }

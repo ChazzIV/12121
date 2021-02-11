@@ -1,0 +1,135 @@
+:host {
+    display: block;
+    padding: 30px;
+    
+    .login-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mat-card-title {
+        display: flex;
+        .mat-accent {
+            text-decoration: revert;
+          }
+
+        a {
+            margin: 10px;
+            text-decoration: none;
+        }
+    }
+
+    .box {
+        background-color: #f4f4f4;
+        padding: 50px;
+    }
+
+    .mat-card-header {
+        display: flex;
+        justify-content: center;
+    }
+    .mat-form-field {
+        display: block;
+        width: 100%;
+    }
+
+    .btn-block {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        background: #554646;
+    }
+}
+
+@media screen and (max-width:900px) {
+    :host {
+        display: block;
+        padding-top: 30px;
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    
+        .mat-card-title {
+            display: flex;
+            .mat-accent {
+                text-decoration: revert;
+              }
+    
+            a {
+                margin: 10px;
+                text-decoration: none;
+            }
+        }
+    
+        .box {
+            background-color: #f4f4f4;
+            padding: 100px;
+        }
+    
+        .mat-card-header {
+            display: flex;
+            justify-content: center;
+        }
+        .mat-form-field {
+            display: block;
+            width: 100%;
+        }
+    
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background: #554646;
+        }
+    }
+    
+}
+
+@media screen and (max-width:500px) { 
+    :host {
+        display: block;
+        padding-top: 30px;
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    
+        .mat-card-title {
+            display: flex;
+            .mat-accent {
+                text-decoration: revert;
+              }
+    
+            a {
+                margin: 10px;
+                text-decoration: none;
+            }
+        }
+    
+        .box {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+    
+        .mat-card-header {
+            display: flex;
+            justify-content: center;
+        }
+        .mat-form-field {
+            display: block;
+            width: 100%;
+        }
+    
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background: #554646;
+        }
+    }
+}
