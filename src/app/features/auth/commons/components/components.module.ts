@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthMaterialModule } from '../material/material.module';
 import { RessetPasswordComponent } from './resset-password/resset-password.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const COMPONETS = [
   LoginComponent, 
@@ -18,7 +19,9 @@ const COMPONETS = [
   imports: [
     CommonModule,
     AuthMaterialModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthComponentsModule { }

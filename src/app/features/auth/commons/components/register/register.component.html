@@ -8,42 +8,85 @@
         </mat-card-title>
       </mat-card-header>
   
-      <form class="example-form">
+      <form class="example-form" [formGroup]="userRegistrationForm">
   
         <mat-card-content>
-          <p>
+          <div>
             <mat-form-field appearance="outline">
-              <mat-label>Nick</mat-label>
-              <input matInput>
+              <mat-label>Nickname</mat-label>
+              <input type="text" matInput formControlName="nickFormControl" 
+                     placeholder="Nick1234">
+              <!-- <mat-error *ngIf="nickFormControl.hasError('nick') && !nickFormControl.hasError('required')">
+                Ingrese un Nickname valido.
+              </mat-error> -->
+              <mat-error >
+                {{errors.nickName}}
+              </mat-error>
             </mat-form-field>
-          </p>
-          <p>
+          </div>
+          <div>
             <mat-form-field appearance="outline">
-              <mat-label>Correo electrónico</mat-label>
-              <input matInput>
+              <mat-label>Email</mat-label>
+              <input type="email" matInput formControlName="emailFormControl" 
+                     placeholder="Ex. pat@example.com">
+              <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Ingrese un correo electrónico valido.
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Correo electrónico es <strong>requerido</strong>
+              </mat-error> -->
+              <mat-error >
+                {{errors.email}}
+              </mat-error>
             </mat-form-field>
-          </p>
-          <p>
+          </div>
+          <div>
             <mat-form-field appearance="outline">
               <mat-label>Contraseña</mat-label>
-              <input matInput>
+              <input type="password" matInput formControlName="passwordFormControl" 
+                     placeholder="**********">
+              <!-- <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
+                Ingrese una contraseña valida.
+              </mat-error>
+              <mat-error *ngIf="passwordFormControl.hasError('required')">
+                contraseña es <strong>requerido</strong>
+              </mat-error> -->
+              <mat-error >
+                {{errors.password}}
+              </mat-error>
             </mat-form-field>
-          </p>
-          <p>
+          </div>
+          <div>
             <mat-form-field appearance="outline">
               <mat-label>Confirmar Contraseña</mat-label>
-              <input matInput>
+              <input type="password" matInput formControlName="confirmPasswordFormControl" 
+                     placeholder="**********">
+              <!-- <mat-error *ngIf="confirmPasswordFormControl.hasError('password') && !confirmPasswordFormControl.hasError('required')">
+                Ingrese una contraseña valida.
+              </mat-error>
+              <mat-error *ngIf="confirmPasswordFormControl.hasError('required')">
+                contraseña es <strong>requerido</strong>
+              </mat-error> -->
+              <mat-error >
+                {{errors.confirmPassword}}
+              </mat-error>
             </mat-form-field>
-          </p>
+          </div>
         </mat-card-content>
   
-        <button mat-stroked-button color="" class="btn-block">Crear Cuenta</button>
+        <button mat-stroked-button 
+                [disabled]="userRegistrationForm.invalid" 
+                class="btn-block"
+                (click)="register()">Crear Cuenta</button>
         <br>
-        <p>
+        <div>
           Al registrarte, estas aceptando los <a class="link-route">Términos y condiciones</a>, y la
           <br>
           <a class="link-route">Política de privacidad y protección de datos</a> de COMFECO 
-        </p>
+        </div>
       </form>
+    
+    
+
     </mat-card>
   </div>

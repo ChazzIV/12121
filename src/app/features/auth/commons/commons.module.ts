@@ -10,7 +10,7 @@ import { AuthComponentsModule } from './components/components.module';
   exports: [
     AuthServicesModule,
     AuthMaterialModule,
-    AuthComponentsModule
+    AuthComponentsModule,
   ]
 })
 export class AuthCommonsModule { }
